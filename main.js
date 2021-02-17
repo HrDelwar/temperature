@@ -14,7 +14,7 @@ getId('search-input').addEventListener('keyup', function () {
 
 // get weather data with api for city from open-weather-map website 
 function getWetherData(cityName) {
-    const apiKey = '98062c4f5a1da34f50763d62f0d1d006';//api key for open-weather-map website
+    const apiKey = config.YOUR_API_KEY;//api key for open-weather-map website
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
         .then(res => {
             return res.json()
